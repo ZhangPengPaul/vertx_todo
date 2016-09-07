@@ -91,6 +91,18 @@ public class Todo {
         this.url = url;
     }
 
+    public static int getIncId() {
+        return acc.get();
+    }
+
+    public void setIncId() {
+        this.id = acc.incrementAndGet();
+    }
+
+    public static void setIncIdWith(int n) {
+        acc.set(n);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
